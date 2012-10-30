@@ -18,8 +18,8 @@ Notable features/functionality
 
 
 
-The fundamental (i.e. really, REALLY important) core source files
------------------------------------------------------------------
+The interpreter's core source files
+-----------------------------------
   * parse.y: this file contains the totality of the parsing/tokenizing code, and is a Bison-compatible file.
   * class.c: the bulk of the code relating to implementation of a fully object-oriented environment is in this file.
   * symbol.c: most of the code that deals with dynamic variable assignment/reference, etc..
