@@ -1,0 +1,23 @@
+puts "\nDemonstration of TOI's exception-handling support."
+puts "--------------------------------------------------"
+puts
+n = 0
+begin
+	puts "At the beginning of the BEGIN block."
+	print "  ... "
+	if (n == 0)
+		puts "n is " + n + ", throwing an exception."
+		throw
+	else
+		puts "n is " + n + ", not throwing an exception."
+	end
+	puts "This is the last line of the `begin' block."
+rescue
+	n = 1
+	puts "Rescued (caught) exception! Setting the value of `n' to 1 and retrying."
+	puts
+	retry
+	puts "After the `retry' statement (if you see this, it's a bug)."
+end
+puts "\nOutside of the BEGIN block; will now throw an exception w/ custom message..."
+throw "\nUncaught exception: Voila, custom exception message -- no fuss, no muss."

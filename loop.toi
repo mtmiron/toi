@@ -1,0 +1,18 @@
+puts "\nDemonstration of loops."
+puts "-------------------------"
+puts
+
+def echo_value(i)
+	puts "Value of `i' is: " + i.to_s()
+end
+
+i = 0
+echo_value(i)
+puts "Will now loop, incrementing i by 1 each iteration.  Stopping when i == 1,000,000 (one million)."
+
+while i < 1000000
+	i++
+end
+
+echo_value(i)
+puts

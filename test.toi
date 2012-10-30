@@ -1,0 +1,119 @@
+# This is an example comment
+puts
+puts "String manipulation"
+puts "-------------------"
+# Note that single-quotes or double-quotes can enclose strings
+string = "1,2,3"
+sub = "2,"
+puts "String subtraction: `" + string + "' - `" + sub + "' is `" + (string - sub) + "'"
+puts "String multiplication: " + "'test' + ('.' * 3) is: `" + 'test' + ('.' * 3) + "'"
+
+puts "Handle escape character in strings (source has \\t and \\\"): \tJohn said, \"hello there!\""
+test_string = "FaRSiDE ArizONA"
+puts "`" + test_string + "'.downcase().split(`side') is: " + test_string.downcase().split("side").to_s()
+string = "TOI rules"
+puts "`" + string + "'.length() is " + string.length() + "."
+write ' '
+i = 1
+while i <= string.length()
+	write i
+	i+=1
+end
+puts "  <-- The letter count (notice that it's accurate)."
+puts
+
+puts "Arrays (global variable ``ARGV'' is an array of the program's parameters)"
+puts "--------------------------------------------------------------"
+puts "ARGV.inspect() is: " + ARGV.inspect() + "  (inspect method should return `{Class}:{hex RAM address}')"
+puts "ARGV is (implicit cast to a string): " + ARGV
+puts "ARGV.length() is: " + ARGV.length()
+puts "ARGV[0] is: " + ARGV[0]
+puts "ARGV[-1] (negative indexes reference from last position, as opposed to first) is: " + ARGV[-1]
+puts "ARGV[1000] (out of bounds example) is: " + ARGV[1000]
+puts "ARGV.pop() is: " + ARGV.pop()
+puts "ARGV.length() is now: " + ARGV.length()
+
+puts "\nPushing the string `last' on to the ARGV array."
+ARGV.push("last")
+puts "ARGV is now: " + ARGV
+puts "Will now `unshift' (opposite of stack `shift') the string `first'."
+ARGV.unshift("first")
+puts "ARGV is now: " + ARGV
+
+puts "\nArithmetic (including nested parentheses, order of operations, & proper integer/float results)"
+puts "------------------------------------------------------------------"
+puts "10 + 2 * 5 is: " + (10 + 2 * 5)
+puts "((10 + 2) * 5) is: " + ((10 + 2) * 5)
+puts "2 ** 8 (2 to the 8th power) is: " + 2 ** 8
+puts "(10.2 - 2.5 * 2) is: " + (10.2 - 2.5 * 2).to_s()
+puts "-5 is (handle unary minus during parsing): " + -5
+puts
+
+puts "An example of variable assignment & referencing"
+puts "-----------------------------------------------"
+puts "(variable = 10) makes `variable': " + (variable = 10)
+puts "(variable = variable + 5) makes `variable': " + (variable = variable + 5)
+puts "(variable -= 5) makes `variable': " + (variable -= 5)
+puts "(variable /= 2) makes `variable': " + (variable /= 2)
+puts
+
+puts "Conditional execution (IF/ELSE, WHILE loops, etc.)"
+puts "---------------------"
+while true
+	while true
+		while true
+			puts "second nested WHILE loop is BREAKing (this should be 1st)"
+			break
+		end
+		puts "first nested WHILE loop is BREAKing (this should be 2nd)"
+		break
+	end
+	puts "original (outer) WHILE loop is BREAKing (this should be 3rd)"
+	break
+end
+puts "IF/ELSE testing:"
+ret = true
+if ret
+	puts "This **SHOULD** be seen 1"
+	if true
+		if false
+			puts "This **SHOULD NOT** be seen 1"
+		else
+			puts "This **SHOULD** be seen 2"
+		end
+	else
+		if true
+			puts "This **SHOULD NOT** be seen 2"
+		end
+	end
+else
+	puts "This **SHOULD NOT** be seen 3"
+end
+
+puts
+puts "Miscellaneous demonstrations"
+puts "----------------------------"
+print "Sleeping for 3 seconds (and flushing STDOUT)..."
+
+# necessary to flush STDOUT, otherwise the text remains buffered w/o being written
+stdout.flush()
+
+sleep 3
+puts "awake again."
+puts
+a = Array.new()
+s = String.new()
+puts "`a = Array.new()' yields: " + a
+puts "`s = String.new()' yields: " + s.inspect()
+puts
+
+write "Please type in a line (any line): "
+line = "(none)"
+line = stdin.gets()
+
+puts "You entered: `" + line.chomp() + "'"
+puts
+puts "Will now exit the script (skipping the `puts' that follows in the source)."
+exit
+
+puts "No, wait, wait, I haven't been SEEN YET...!!"

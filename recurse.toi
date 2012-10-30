@@ -1,0 +1,27 @@
+puts
+puts "Recursion demonstration: TOI is capable of handling a very deep stack (i.e., many layers of recursion).  Note also proper scope handling."
+puts "-----------------------------------------------------------------------------------------------------------------------------------------"
+
+def recursion_test(n)
+	if (n >= 10000)
+		n
+	else
+#		puts "n is " + n + ", recursing further..."
+		recursion_test(n+1)
+	end
+end
+
+def echo_value(i)
+	puts "Variable is: " + i.to_s()
+end
+
+n = 0
+echo_value(n)
+puts "..."
+
+while n < 50
+	n+=1
+	recursion_test(n)
+end
+
+echo_value(n)

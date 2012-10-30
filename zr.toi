@@ -1,0 +1,16 @@
+x = 2 - -2  # == 2.-(-2)
+y = 2 - - 2 # == 2-- 2
+puts 1 + 2 + 3 + 4 + 5
+# == 1.+(2).+(3).+a
+# == 1.plus(2).plus(3).plus(4)
+puts 1 + (2 + 3) + 4 + 5
+# == 1.plus( (2.plus(3))
+x = 2
+puts(x--)
+puts(x ** )
+
+
+puts 5
+ 
+def function(x = VAR+1)
+

@@ -1,0 +1,27 @@
+#!./toi
+x = 4
+def test_function
+    x
+end
+
+class String
+	def testing(thing)
+		puts thing.inspect()
+		puts self.inspect()
+	end
+end
+
+class Object
+	def global_object_method_test(arg)
+		puts arg
+		puts self.inspect()
+	end
+end
+
+str = "blah-blah"
+num = 5
+
+puts str.testing("parameter")
+a.global_object_method_test("success!")
+x = 7
+puts test_function()

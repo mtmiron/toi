@@ -1,0 +1,10 @@
+x = 5
+def test
+    return "yay"
+end
+
+def method(var)
+  return test()
+end
+
+puts(method(5))

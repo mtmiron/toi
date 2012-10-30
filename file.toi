@@ -1,0 +1,27 @@
+puts "\nDemonstration of TOI's file creation/input/output support."
+puts "-----------------------------------------------------------"
+
+file = File.new("test.txt")
+original_string = file.inspect()
+
+puts "Writing `" + original_string + "' to `test.txt' (the written data is what inspect()'ing the file object returned)."
+file.puts(original_string)
+
+puts "\nClosing said file..."
+file.close()
+
+puts "..."
+puts "Reopening said file..."
+
+file = File.open("test.txt")
+puts "\nReading the contents of `" + file.inspect() + "' (filename is \"" + file.path() + "\")."
+puts
+
+string = file.read()
+puts "Contents should be:    " + original_string
+puts "Contents actually is:  " + string
+
+file.close()
+puts "\nDeleting the file now."
+File.unlink("test.txt")
+puts
