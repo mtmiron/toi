@@ -1,5 +1,5 @@
-The TOI language, an undergraduate class project by Murray Miron
-================================================================
+The TOI interpreter: an independent study project
+=================================================
 
 A basic rundown in a single sentence
 ------------------------------------
