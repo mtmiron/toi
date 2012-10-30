@@ -1,13 +1,12 @@
-
 The TOI language, an undergraduate class project by Murray Miron
 ----------------------------------------------------------------
 
-- A basic rundown in a single sentence:
+= A basic rundown in a single sentence:
   * TOI is split up between the core interpreter's source files and the modular "extension" files that implement specific functionality (e.g. string.c [implementing strings], array.c [implementing arrays], etc.); see the source and comments in "toi.h" for a more detailed description of specific structures/files/implementation-details.
 
 
 
-- Notable features/functionality:
+= Notable features/functionality:
 
   * Exception handling.	[see exception.toi for demonstration]
 
@@ -23,7 +22,7 @@ The TOI language, an undergraduate class project by Murray Miron
 
 
 
-- The fundamental (i.e. really, REALLY important) core source files:
+= The fundamental (i.e. really, REALLY important) core source files:
 
   * parse.y: this file contains the totality of the parsing/tokenizing code, and is a Bison-compatible file.
 
