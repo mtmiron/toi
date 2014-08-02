@@ -20,7 +20,7 @@ static VALUE current_class, pop_self0();
 static vector_t *end_vector;
 
 /* Legal "operator" characters (recognized as token delimiters) */
-static int oplist[] = { '\n',
+static char oplist[] = {
 	';',
 	'+',
 	'-',
@@ -44,7 +44,35 @@ static int oplist[] = { '\n',
 	' ',
 };
 
-static struct { char *str; int code; } keywords[] = {
+#ifndef YYTOKENTYPE
+# define YYTOKENTYPE
+   /* Put the tokens into the symbol table, so that GDB and other debuggers
+      know about them.  */
+   enum yytokentype {
+     tCONSTANT = 258,
+     tSYMBOL = 259,
+     tINTEGER = 260,
+     tFLOAT = 261,
+     tSTRING = 262,
+     tBREAK = 263,
+     tELSE = 264,
+     tEND = 265,
+     tLOOP = 266,
+     tFAIL = 267,
+     tRESCUE = 268,
+     tBEGIN = 269,
+     tDEFINE = 270,
+     tCLASS = 271,
+     tNOT = 272,
+     tWHILE = 273,
+     tTHEN = 274,
+     tIF = 275,
+     tAND = 276,
+     tOR = 277
+   };
+#endif
+
+struct { char *str; VALUE code; } keywords[] = {
 	{ "class", tCLASS },
 	{ "def", tDEFINE },
 	{ "begin", tBEGIN },

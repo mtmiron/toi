@@ -5,9 +5,7 @@
 //#include "config.h"
 //#include "defines.h"
 #include <stdio.h>
-#ifdef HAVE_STDLIB_H
 #include <stdlib.h>
-#endif
 #include <string.h>
 #include "st.h"
 

@@ -156,7 +156,7 @@ mcall_call(VALUE meth)
 {
 	VALUE save_self, recv, krecv, sym, func = Qnil, ret = Qnil;
 	int i, argc;
-	static int curi = 0;
+	int curi = 0;
 #ifdef csize
 	#undef csize
 #endif

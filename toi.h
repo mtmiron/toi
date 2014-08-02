@@ -403,7 +403,7 @@ typedef struct hash {
 
 typedef struct integer {
 	Basic b;
-	int num;
+	long int num;
 } Integer;
 
 typedef struct phloat {
