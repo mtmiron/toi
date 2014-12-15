@@ -2650,10 +2650,20 @@ main(int argc, char **argv)
 	vector_t *stk;
 
 	/* were we run with a file parameter? */
-	if (argc > 1)
+	if (argc > 1 && *argv[1] == '-') {
+        switch (*(argv[1]+1)) {
+        case 'h':
+            printf("Usage: %s [file]\n", argv[0]);
+        default:
+            return 1;
+        }
+    }
+    else if (argc > 1) {
 		istream = fopen(argv[1], "r");
-	else
+    }
+	else {
 		istream = stdin;
+    }
 
 	/* report & abort if we have no I/O stream */
 	if (!istream)

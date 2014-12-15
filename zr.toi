@@ -13,4 +13,5 @@ puts(x ** )
 puts 5
  
 def function(x = VAR+1)
-
+puts 'blah'
+end

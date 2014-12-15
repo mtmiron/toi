@@ -25,3 +25,5 @@ puts str.testing("parameter")
 a.global_object_method_test("success!")
 x = 7
 puts test_function()
+
+puts blahblahblah.inspect()

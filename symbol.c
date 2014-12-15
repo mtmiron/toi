@@ -196,8 +196,8 @@ var_in_scope(VALUE sym, VALUE thr)
 			thr = THREAD(thr)->up;
 	}
 
-	if (st_lookup(THREAD(main_thread())->env_tbl, (st_data_t)sym, NULL))
-		return main_thread();
+	//if (st_lookup(THREAD(main_thread())->env_tbl, (st_data_t)sym, NULL))
+    //		return main_thread();
 
 	return (VALUE)0;
 }
