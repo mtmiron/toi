@@ -3,7 +3,7 @@ TOI (Tiny Object oriented Interpreter): an independent study project
 
 A basic rundown in a single sentence
 ------------------------------------
-  * TOI is split up between the core interpreter's source files and the modular "extension" files that implement specific functionality (e.g. string.c [implementing strings], array.c [implementing arrays], etc.); see the source and comments in "toi.h" for a more detailed description of specific structures/files/implementation-details.
+  * TOI is split up between the core interpreter's source files and the modular "extension" files that implement specific functionality (e.g. string.c [implementing strings], array.c [implementing arrays], etc.); see the source and comments in "toi.h" for a more detailed description of specific structures/files/implementation-details.  It's basically Ruby or Python without a virtual machine (and with a lot more bugs).
 
 
 
